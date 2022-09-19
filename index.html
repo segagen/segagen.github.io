@@ -13,6 +13,7 @@
                 background : lightyellow;
                 height: 200px;
                 overflow:auto;
+                
             }
 
             .places {
@@ -22,22 +23,23 @@
             h2 {
                 color : yellow;
                 background : purple;
+                padding: 15px;
             }
 
             #travel-heading {
                 font-family: "Maven Pro", sans-serif;
-        		font-size: 5em;
+        		font-size: 8em;
                 letter-spacing: .2rem;
         		text-align: center;
-                color : purple;
-                background : yellow;
+                color : yellow;
+                background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Iberian_Peninsula_at_Night_-_NASA_Earth_Observatory.jpg/1200px-Iberian_Peninsula_at_Night_-_NASA_Earth_Observatory.jpg);
                     }
 
         	#read-more-earth {
-        		color : purple;
+        		color :  purple;
 		                }
 
-        	body {
+        	#body-container {
         		margin-left: 100px;
         		margin-right: 100px;
         		margin-bottom: 150px;
@@ -47,29 +49,63 @@
             .planet-earth {
                 font-weight: bolder;
                 font-style: italic;
-                color: blueviolet;
+                color:  purple;
+                
             }
 
+            #estimate-table {
+                margin: auto;
+                border: 15px double purple;
+                padding: 15px;
+            }
+
+            #spinning-earth1 {
+                position: absolute;
+                height: 150px;
+                top: 110px;
+                left: 970px;
+
+            }
+
+            #spinning-earth2 {
+                position: absolute;
+                height: 150px;
+                top: 110px;
+                left: 130px;
+
+            }
+
+            .place-img {
+                margin-top: 10px;
+            }
+
+
         </style>
+        
     </head>
 
 
     <body>
+        <div id = "body-container">
 
-        <h1 id = "travel-heading">TRAVEL TO PLANET EARTH!!</h1>
+        <h1 id = "travel-heading">TRAVEL TO PLANET EARTH</h1>
 
-	<!-- this is a comment -->
+        <img src="https://i.pinimg.com/originals/32/88/2d/32882dbcd4424eb8e814ce8e62e68361.gif" alt="Spinning planet Earth" id="spinning-earth1">
+        <img src="https://i.pinimg.com/originals/32/88/2d/32882dbcd4424eb8e814ce8e62e68361.gif" alt="Spinning planet Earth" id="spinning-earth2">
 
+	    <!-- this is a comment -->
+
+        
         <p>The <span class = "planet-earth">planet Earth</span> is one of the many planets in the universe we call our home. It is often regarded by its inhabitants as the center of the universe. This planet harbors a variety of ecosystems. Any visitor is bound to find something they will enjoy! Join us today for <em>lush forests, arid deserts, humid jungles, and much more</em>! <a target= "_blank" href="https://en.wikipedia.org/wiki/Earth"><strong id = "read-more-earth"> Read more about this destination. </strong></p></a>
+        
 
-
+        
         <a href = "#reasons"><p>Reasons to Visit</p></a>
         <a href = "#top"><p>Top Places to See</p></a>
         <a href = "#estimates"><p>Estimates</p></a>
-
+         
 
         <h2 id = "reasons" > Reasons to visit</h2>
-
         <ul>
             <li>Diverse landscapes </li>
             <li>Mild climates</li>
@@ -78,25 +114,38 @@
 
        
 
-        <h2 id = "top">Top places to see</h2>
+        <h2 id = "top"> Top places to see</h2>
 	    <p>These are the highest rated places to visit according to our millions of satisfied travelers!</p>
 
+        
+        <!--
+            I can't get the images to sit nicely to the left without damaging the format of those that lay underneath
+            .place-img {
+                float:left;
+                padding: 15px;
+            }-->
         <div class = "top-places">
             <ol>
                 <li class = "places">The Circle Exhibit</li>
-                <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/crop-circle.png" alt = "crop circles" height = "100">
-                <p>A place known for it's creative designs in organic materials. Fetaures works from new and up and coming artists from around the universe. </p>
+                <img class = "place-img" src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/crop-circle.png" alt = "crop circles" height = "100">
+                <p>A place known for it's creative designs in organic materials. Features works from new and up and coming artists from around the universe. Check in monthly for the latest news about the featured artists. Contact 
+                    us for more information regarding exhibition requirements. I need more sentences but I ran out of things to say. I'm going to be fired, oh dear god. How much more must I write? My hand grows tired but the format
+                    refuses to settle and the words do not come. They hid in the darkness that surrounds my mind. How many more sentences can I endure. Surely not many more. One fish, red fish, two fish, blue fish, or so the story goes. 
+                </p>
                 <li class = "places">Strawberry Meadow</li>
-                <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/fields-of-wine.png" alt = "a low field with farmland in the background" height = "100">
+                <img class = "place-img" src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/fields-of-wine.png" alt = "a low field with farmland in the background" height = "100">
+                <p>Take a walk in the meadow. Beautiful all year round, this is a place to bring the whole family.  </p>
                 <li class = "places"> Bill's Backyard </li>
-                <img src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/sand-dunes.png" alt = "sand dunes behind some reeds" height = "100">
+                <img class = "place-img" src="https://cdn.kastatic.org/third_party/javascript-khansrc/live-editor/build/images/landscapes/sand-dunes.png" alt = "sand dunes behind some reeds" height = "100">
+                <p>Features a lounging area and a sand pit for the kids. This is a relaxing place to enjoy golden sunsets and brilliant night skies.</p>
             </ol>
         </div>
 
 
 
-        <h2 id = "estimates">Estimates</h2>
+        <h2 id = "estimates"> Estimates</h2>
 
+        <div id = "estimate-table">
         <table>
                     <thead>
                         <tr>
@@ -119,5 +168,7 @@
                         </tbody>
         <table>
 
+        </div>
+        </div>
     </body>
 </html>
